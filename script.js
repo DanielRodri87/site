@@ -21,7 +21,7 @@ function buscarFilme() { // Função para buscar o filme
                 document.getElementById("diretor").innerHTML = "";
                 document.getElementById("escritor").innerHTML = "";
                 document.getElementById("nota").innerHTML = "";
-                document.getElementById("banner").style.backgroundImage = `url(./src/style/choro.png)`;
+                document.getElementById("banner").style.backgroundImage = `url(./img/choro.png)`;
 
 
         }   else{ // Se o filme existir, retorna os dados do filme
