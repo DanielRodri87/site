@@ -1,4 +1,5 @@
 function buscarFilme() { // Função para buscar o filme
+    alert("Buscar filme");
     const filme = document.getElementById("busca").value; // Pega o valor do input de busca lá do HTML
     const api_pesquisa = `http://www.omdbapi.com/?t=${filme}&apikey=790af7bc`; // URL da API + o filme que o usuário digitou
     fetch(api_pesquisa) // Faz a requisição
