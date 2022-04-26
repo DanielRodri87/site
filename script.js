@@ -10,7 +10,7 @@ function buscarFilme() { // Função para buscar o filme
         )
         // .then serve para pegar o JSON e transformar em um objeto
         .then(function (data) {  
-            if(data.Response == 'False'){ // Se o filme não existir, retorna um aviso informando ao usuário que o filme não existe
+            if(data.response == 'False'){ // Se o filme não existir, retorna um aviso informando ao usuário que o filme não existe
                 console.log(data); // Mostra no console o que foi retornado
                 // Usando document.getElementById para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo
                 document.getElementById("descricao").innerHTML = "Filme não encontrado! Digite novamente";
