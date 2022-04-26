@@ -8,13 +8,14 @@ function buscarFilme() { // Função para buscar o filme
             return response.json(); // Retorna o JSON, com a resposta da API: False ou True
         }
         )
+        // .then serve para pegar o JSON e transformar em um objeto
         .then(function (data) {  
             if(data.Response == 'False'){ // Se o filme não existir, retorna um aviso informando ao usuário que o filme não existe
                 console.log(data); // Mostra no console o que foi retornado
                 // Usando document.getElementById para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo
                 document.getElementById("descricao").innerHTML = "Filme não encontrado! Digite novamente";
-                document.getElementById("titulo").innerHTML = "";
-                document.getElementById("sinopse").innerHTML = "";
+                document.getElementById("titulo").innerHTML = ""; // document.getElementById serve para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo 
+                document.getElementById("sinopse").innerHTML = ""; // O innerHTML serve para alterar o conteúdo do elemento HTML
                 document.getElementById("duracao").innerHTML = "";
                 document.getElementById("tipo").innerHTML = "";
                 document.getElementById("ano").innerHTML = "";
