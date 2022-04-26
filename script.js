@@ -11,10 +11,9 @@ function buscarFilme() { // Função para buscar o filme
         }
         )
         // .then serve para pegar o JSON e transformar em um objeto
-        .then(function (data) {  
-            if(data.response == 'False'){ // Se o filme não existir, retorna um aviso informando ao usuário que o filme não existe
-                console.log(data); // Mostra no console o que foi retornado
-                // Usando document.getElementById para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo
+        .then(function (data) { 
+            
+            if(data.Response == 'False'){ // se o filme não for encontrado
                 document.getElementById("descricao").innerHTML = "Filme não encontrado! Digite novamente";
                 document.getElementById("titulo").innerHTML = ""; // document.getElementById serve para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo 
                 document.getElementById("sinopse").innerHTML = ""; // O innerHTML serve para alterar o conteúdo do elemento HTML
@@ -27,7 +26,8 @@ function buscarFilme() { // Função para buscar o filme
                 document.getElementById("banner").style.backgroundImage = `url(./img/choro.png)`; // Altera a imagem do banner
 
 
-        }   else{ // Se o filme existir, retorna os dados do filme
+
+        }   else{  // Se o filme existir, retorna os dados do filme
                 console.log(data); // Mostra no console o que foi retornado
                 // Usando document.getElementById para pegar o elemento HTML a partir do ID, e alterar o seu conteúdo com os dados do filme
                 document.getElementById("descricao").innerHTML = "";
