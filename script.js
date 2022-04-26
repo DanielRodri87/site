@@ -4,6 +4,8 @@ function buscarFilme() { // Função para buscar o filme
     const api_pesquisa = `http://www.omdbapi.com/?t=${filme}&apikey=790af7bc`; // URL da API + o filme que o usuário digitou
     console.log("Pesquisa feita");
     fetch(api_pesquisa) // Faz a requisição
+
+        // Transforma a resposta em JSON
         .then(function (response) { 
             return response.json(); // Retorna o JSON, com a resposta da API: False ou True
         }
@@ -22,7 +24,7 @@ function buscarFilme() { // Função para buscar o filme
                 document.getElementById("diretor").innerHTML = "";
                 document.getElementById("escritor").innerHTML = "";
                 document.getElementById("nota").innerHTML = "";
-                document.getElementById("banner").style.backgroundImage = `url(./img/choro.png)`;
+                document.getElementById("banner").style.backgroundImage = `url(./img/choro.png)`; // Altera a imagem do banner
 
 
         }   else{ // Se o filme existir, retorna os dados do filme
